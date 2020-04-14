@@ -38,9 +38,14 @@ const render = () => {
         });
 
         const btnTodoRemove = li.querySelector('.todo-remove');
-        btnTodoRemove.addEventListener('click', (i) => {
-            todoData.splice(i,1);
-            li.parentNode.removeChild(li);
+        btnTodoRemove.addEventListener('click', () => {
+            let newTodo = [];
+            for (let index = 0; index <todoData.length; index++) {
+                 if (item.value !== todoData[index].value){
+                    newTodo.push(todoData[index]);
+                 }
+            }
+            todoData = newTodo;
             render();
         });
     });
