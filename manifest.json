@@ -1,0 +1,8 @@
+{
+    "short_name": "ToDo",
+    "name": "To Do List",
+       
+    "start_url": "/",
+    "orientation": "any",
+    "display": "standalone"
+   }
